@@ -1,4 +1,6 @@
 import random
+import pliki as pl
+
 
 class Gracz():
 
@@ -28,8 +30,10 @@ class Gracz():
             print(f'wynik: {wynik}, ilość żyć: {self.ilosc_zyc}')
         else:
             print(f'Zakończyłeś już grę!!!')
+        pl.zapisz_dane(f'wynik: {wynik}, ilość żyć: {self.ilosc_zyc}\n')
 
 
 adam = Gracz("Adam", "Bułka")
 for a in range(10):
     adam.graj()
+pl.odczytaj_dane()
